@@ -24,4 +24,15 @@ public class MommifierTest {
         //Then
         assertEquals("apple",result);
     }
+
+    @Test
+    void given_a_string_lenth_which_vowls_is_more_than_30_persent_and_has_continuous(){
+        //Given
+        GivenString givenString = new GivenString();
+        String inputString = "tree";
+        //when
+        String result = givenString.convert(inputString);
+        //Then
+        assertEquals("tremommye",result);
+    }
 }

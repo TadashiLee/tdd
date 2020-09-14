@@ -14,11 +14,23 @@ public class GivenString {
             return inputString;
         } else {
             if (hasContinuous(inputString, "aa") || hasContinuous(inputString, "ee") || hasContinuous(inputString, "ii") || hasContinuous(inputString, "oo") || hasContinuous(inputString, "uu")){
-                return null;
+                if (addwhere(inputString, "aa")) return addMommy(inputString, "aa");
+                if (addwhere(inputString, "ee")) return addMommy(inputString, "ee");
+                if (addwhere(inputString, "ii")) return addMommy(inputString, "ii");
+                if (addwhere(inputString, "oo")) return addMommy(inputString, "oo");
+                if (addwhere(inputString, "uu")) return addMommy(inputString, "uu");
             }else {
                 return inputString;
             }
         }
+        return null;
+    }
+
+    private boolean addwhere(String inputString, String aa) {
+        if (hasContinuous(inputString, aa)) {
+            return true;
+        }
+        return false;
     }
 
     public static boolean hasContinuous(String inputString, String judgeString) {
@@ -27,5 +39,10 @@ public class GivenString {
             flag = true;
         }
         return flag;
+    }
+    public static String addMommy(String inputString, String judgeString){
+        StringBuilder stringBuilder = new StringBuilder(inputString);
+        stringBuilder.insert(inputString.indexOf(judgeString)+1,"mommy");
+        return stringBuilder.toString();
     }
 }
