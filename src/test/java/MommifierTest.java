@@ -57,4 +57,5 @@ public class MommifierTest {
         //Then
         assertEquals("",result);
     }
+
 }

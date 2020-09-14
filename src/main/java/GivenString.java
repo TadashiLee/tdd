@@ -1,8 +1,9 @@
 public class GivenString {
 
     public String convert(String inputString) {
-
-
+        if (inputString.length()==0){
+            return "";
+        }
 
         int vowelsCount = 0;
         final double minVowlsPersent = 0.3;
