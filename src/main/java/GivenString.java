@@ -1,6 +1,9 @@
 public class GivenString {
 
     public String convert(String inputString) {
+
+
+
         int vowelsCount = 0;
         final double minVowlsPersent = 0.3;
         for (int i = 0; i < inputString.length(); i++) {
@@ -14,11 +17,11 @@ public class GivenString {
             return inputString;
         } else {
             if (hasContinuous(inputString, "aa") || hasContinuous(inputString, "ee") || hasContinuous(inputString, "ii") || hasContinuous(inputString, "oo") || hasContinuous(inputString, "uu")){
-                if (addwhere(inputString, "aa")) return addMommy(inputString, "aa");
-                if (addwhere(inputString, "ee")) return addMommy(inputString, "ee");
-                if (addwhere(inputString, "ii")) return addMommy(inputString, "ii");
-                if (addwhere(inputString, "oo")) return addMommy(inputString, "oo");
-                if (addwhere(inputString, "uu")) return addMommy(inputString, "uu");
+                if (addwhere(inputString, "aa")) return convert(addMommy(inputString, "aa"));
+                if (addwhere(inputString, "ee")) return convert(addMommy(inputString, "ee"));
+                if (addwhere(inputString, "ii")) return convert(addMommy(inputString, "ii"));
+                if (addwhere(inputString, "oo")) return convert(addMommy(inputString, "oo"));
+                if (addwhere(inputString, "uu")) return convert(addMommy(inputString, "uu"));
             }else {
                 return inputString;
             }

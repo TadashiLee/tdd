@@ -26,7 +26,7 @@ public class MommifierTest {
     }
 
     @Test
-    void given_a_string_lenth_which_vowls_is_more_than_30_persent_and_has_continuous(){
+    void given_a_string_lenth_which_vowls_is_more_than_30_persent_and_has_1_continuous(){
         //Given
         GivenString givenString = new GivenString();
         String inputString = "tree";
@@ -34,5 +34,27 @@ public class MommifierTest {
         String result = givenString.convert(inputString);
         //Then
         assertEquals("tremommye",result);
+    }
+
+    @Test
+    void given_a_string_lenth_which_vowls_is_more_than_30_persent_and_has_more_than_1_continuous(){
+        //Given
+        GivenString givenString = new GivenString();
+        String inputString = "treee";
+        //when
+        String result = givenString.convert(inputString);
+        //Then
+        assertEquals("tremommyemommye",result);
+    }
+
+    @Test
+    void given_an_empty_string(){
+        //Given
+        GivenString givenString = new GivenString();
+        String inputString = "";
+        //when
+        String result = givenString.convert(inputString);
+        //Then
+        assertEquals("",result);
     }
 }
