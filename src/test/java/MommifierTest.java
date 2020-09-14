@@ -13,4 +13,15 @@ public class MommifierTest {
         //Then
         assertEquals("axxxx",result);
     }
+
+    @Test
+    void given_a_string_lenth_which_vowls_is_more_than_30_persent_but_has_not_continuous(){
+        //Given
+        GivenString givenString = new GivenString();
+        String inputString = "apple";
+        //when
+        String result = givenString.convert(inputString);
+        //Then
+        assertEquals("apple",result);
+    }
 }
